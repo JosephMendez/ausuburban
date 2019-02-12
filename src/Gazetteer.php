@@ -1,10 +1,10 @@
 <?php
 
-namespace Subbe\Gazetteer;
+namespace JosephMmendez\Gazetteer;
 
 class Gazetteer {
 
-	public function hello($world = null) 
+	public function hello($world = null)
 	{
 		return "hello " . $world;
 	}
@@ -12,36 +12,36 @@ class Gazetteer {
 	public function countries($input = null)
 	{
 
-		if (!$input) 
+		if (!$input)
 		{
-			$countries = \Subbe\Gazetteer\Models\Country::where('active', '=', '1')->get();
+			$countries = \JosephMmendez\Gazetteer\Models\Country::where('active', '=', '1')->get();
 
-			return $countries;	
+			return $countries;
 		}
 		else
 		{
 			if (strlen($input) == 2) {
-				$country = \Subbe\Gazetteer\Models\Country::where('code', '=', $input)
-															->where('active', '=', 1)		
+				$country = \JosephMmendez\Gazetteer\Models\Country::where('code', '=', $input)
+															->where('active', '=', 1)
 															->first();
 				if (!$country) {
 					return "No Item Found";
 				}
 				else {
-					return $country;		
+					return $country;
 				}
 			}
 			elseif (strlen($input) > 2) {
-				$country = \Subbe\Gazetteer\Models\Country::where('name', '=', $input)
-															->where('active', '=', 1)		
+				$country = \JosephMmendez\Gazetteer\Models\Country::where('name', '=', $input)
+															->where('active', '=', 1)
 															->first();
 				if (!$country) {
 					return "No Item Found";
 				}
 				else {
-					return $country;		
+					return $country;
 				}
-				
+
 			}
 			else {
 				return "Bad Request";
@@ -57,7 +57,7 @@ class Gazetteer {
 		}
 		else {
 			if(strlen($input) == 2) {
-				$country = \Subbe\Gazetteer\Models\Country::where('code', '=', $input)
+				$country = \JosephMmendez\Gazetteer\Models\Country::where('code', '=', $input)
 															->where('active', '=', '1')
 															->first();
 
@@ -69,12 +69,12 @@ class Gazetteer {
 						return "No Item Found";
 					}
 					else {
-						return $country->states;		
+						return $country->states;
 					}
 				}
 			}
 			elseif (strlen($input) > 2) {
-				$country = \Subbe\Gazetteer\Models\Country::where('name', '=', $input)
+				$country = \JosephMmendez\Gazetteer\Models\Country::where('name', '=', $input)
 															->where('active', '=', 1)
 															->first();
 				if (!count($country)) {
@@ -85,7 +85,7 @@ class Gazetteer {
 						return "No Item Found";
 					}
 					else {
-						return $country->states;		
+						return $country->states;
 					}
 				}
 			}
@@ -101,7 +101,7 @@ class Gazetteer {
 			return "Bad Request";
 		}
 		else {
-			$country = \Subbe\Gazetteer\Models\Country::where('code', '=', $c)
+			$country = \JosephMmendez\Gazetteer\Models\Country::where('code', '=', $c)
 														->where('active', '=', '1')
 														->first();
 			if (!count($country)) {
@@ -121,7 +121,7 @@ class Gazetteer {
 					return "No Item Found";
 				}
 				else {
-					$suburbs = \Subbe\Gazetteer\Models\Suburb::where('state', '=', $state_code)
+					$suburbs = \JosephMmendez\Gazetteer\Models\Suburb::where('state', '=', $state_code)
 																->orderBy('postcode', 'asc')
 																->get();
 					return $suburbs;
@@ -137,13 +137,13 @@ class Gazetteer {
  		return "Bad Request";
  	}
  	else {
- 		$suburbs = \Subbe\Gazetteer\Models\Suburb::where('postcode', '=', $code)->get();
+ 		$suburbs = \JosephMmendez\Gazetteer\Models\Suburb::where('postcode', '=', $code)->get();
 
  		if (!count($suburbs)) {
  			return "No Item Found";
  		}
  		else {
- 			return $suburbs;	
+ 			return $suburbs;
  		}
  	}
 

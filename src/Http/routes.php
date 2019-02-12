@@ -1,3 +1,3 @@
 <?php
 
-Route::get('test/{world?}', 			'Subbe\Gazetteer\Http\GazetteerController@all');
+Route::get('test/{world?}', 			'JosephMmendez\Gazetteer\Http\GazetteerController@all');

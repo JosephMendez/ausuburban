@@ -1,6 +1,6 @@
 <?php
 
-namespace Subbe\Gazetteer\Models;
+namespace JosephMmendez\Gazetteer\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -31,7 +31,7 @@ class Suburb extends Model
      */
     public function state()
     {
-        return $this->belongsTo('\Subbe\Gazetteer\Models\State', 'state', 'code');
+        return $this->belongsTo('\JosephMmendez\Gazetteer\Models\State', 'state', 'code');
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Subbe\Gazetteer\Facades;
+namespace JosephMmendez\Gazetteer\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

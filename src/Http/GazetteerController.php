@@ -1,6 +1,6 @@
 <?php
 
-namespace Subbe\Gazetteer\Http;
+namespace JosephMmendez\Gazetteer\Http;
 
 use Illuminate\Routing\Controller as BaseController;
 

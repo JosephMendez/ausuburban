@@ -1,11 +1,11 @@
 <?php
 
-namespace Subbe\Gazetteer;
+namespace JosephMmendez\Gazetteer;
 
 use Illuminate\Support\ServiceProvider;
-use Subbe\Gazetteer\Facades;
+use JosephMmendez\Gazetteer\Facades;
 
-class GazetteerServiceProvider extends ServiceProvider 
+class GazetteerServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -15,7 +15,7 @@ class GazetteerServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/database/migrations/' => $this->app->databasePath() . '/migrations' 
+            __DIR__ . '/database/migrations/' => $this->app->databasePath() . '/migrations'
         ], 'migrations');
 
         $this->publishes([
@@ -32,10 +32,10 @@ class GazetteerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        
+
         $this->app->bind('gazetteer', function($app) {
             return new Gazetteer;
         });
-        
+
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Subbe\Gazetteer\Models;
+namespace JosephMmendez\Gazetteer\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -32,7 +32,7 @@ class Country extends Model
      */
     public function states() 
     {
-    	return $this->hasMany('\Subbe\Gazetteer\Models\State', 'country_code', 'code');
+    	return $this->hasMany('\JosephMmendez\Gazetteer\Models\State', 'country_code', 'code');
     }
 
 }
