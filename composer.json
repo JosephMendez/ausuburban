@@ -1,12 +1,12 @@
 {
-    "name": "subbe/gazetteer",
+    "name": "jose/gazetteer",
     "description": "A package build on Laravel 5 which provides a list of all the the  Countries with their states and suburbs",
     "keywords": ["laravel", "gazetteer", "atlas", "countries", "states", "suburbs"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Subbe",
-            "email": "mohamed.suhaib@gmail.com"
+            "name": "JoseUrbs",
+            "email": "joshmen21@yahoo.com"
         }
     ],
     "minimum-stability": "stable",
