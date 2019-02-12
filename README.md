@@ -12,7 +12,7 @@ A package build on Laravel 5 which provides a list of all the the Countries with
 - *Maldives*
 
 ## Install
-1- `composer require subbe/gazetteer`
+1- `composer require josephmmendez/gazetteer`
 
 Open the file `config\app.php`
 
@@ -44,7 +44,7 @@ Now run
 
 3- `composer dump-autload`
 
-4- `php artisan migrate` 
+4- `php artisan migrate`
 
 This will add the 'countries', 'states', and 'suburbs' table to your database.
 
