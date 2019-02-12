@@ -1,0 +1,21 @@
+{
+    "name": "subbe/gazetteer",
+    "description": "A package build on Laravel 5 which provides a list of all the the  Countries with their states and suburbs",
+    "keywords": ["laravel", "gazetteer", "atlas", "countries", "states", "suburbs"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Subbe",
+            "email": "mohamed.suhaib@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Subbe\\Gazetteer\\": "src/"
+        }
+    }
+}
